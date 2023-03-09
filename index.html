@@ -11,36 +11,47 @@
 
 </head>
 <main>
-  <header>
-    <nav>
-      <p class="desktop-nav-item">Product</p>
-      <a href="#">Overview</a>
-      <a href="#">Pricing</a>
-      <a href="#">Marketplace</a>
-      <a href="#">Features</a>
-      <a href="#">Integrations</a>
-  
-
-      <p class="desktop-nav-item">Company</p>
-      <a href="#">About</a>
-      <a href="#">Team</a>
-      <a href="#">Blog</a>
-      <a href="#">Careers</a>    
-
-      <p class="desktop-nav-item">Connect</p>
-      <a href="#">Contact</a>
-      <a href="#">Newsletter</a>
-      <a href="#">LinkedIn</a>
+  <header class="header">
+    <nav class="header__navbar">
+      <img src="./images/logo.svg" alt="Blogr Logo">
+      <ul class="header__nav-menus">
+        <li><a href="#">Product</a></li>
+        <div class="header__dropdown">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
+        <li><a href="#">Company</a></li>
+        <div class="header__dropdown">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+        <li><a href="#">Connect</a></li>
+        <div class="header__dropdown">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </ul>
       
-      <button>Login</button>
-      <button>Sign Up</button>
+      <div class="header__nav-buttons">
+        <a href="#">Login</a>
+        <button class="header__sign-up-btn">Sign Up</button>
+      </div>
     </nav>
 
-    <h1>A modern publishing platform</h1>
-    <p>Grow your audience and build your online brand</p>
-
-    <button>Start for Free</button>
-    <button>Learn More </button>
+    <div class="header__info">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+      <div class="header__info-buttons">
+        <button class="header__start-btn">Start for Free</button>
+        <button class="header__learn-btn">Learn More</button>
+      </div>
+    </div>
   </header>
 
   <section>

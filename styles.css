@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 
 * {
@@ -9,8 +8,8 @@
 
 :root {
     /* PRIMARY COLORS */
-    --light-red: hsl(356, 100%, 66%);
-    --very-light-red: hsl(355, 100%, 74%);
+    --light-red-cta: hsl(356, 100%, 66%);
+    --very-light-red-cta: hsl(355, 100%, 74%);
     --very-dark-blue: hsl(208, 49%, 24%);
 
     /* NEUTRAL COLORS */
@@ -30,4 +29,107 @@
 
 body {
     min-height: 100vh;
+    font-size: var(--fs-default);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* HEADER STYLING */
+
+.header {
+    background: url("./images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, var(--very-light-red), var(--light-red));
+    background-position: 25% 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+    border-bottom-left-radius: 5rem;
+    color: var(--white);
+    font-family: "Overpass", sans-serif;
+    padding: 4rem 10rem;
+    text-align: center
+}
+
+.header a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav-menus {
+    display: flex;
+    margin-left: 4rem;
+    margin-right: auto;
+    gap: 2rem;
+}
+
+.header__nav-menus li::after {
+    content: url("./images/icon-arrow-light.svg");
+    margin-left: 0.5rem;
+}
+
+.header__dropdown {
+    display: none;
+}
+
+.header__nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__sign-up-btn,
+.header__start-btn,
+.header__learn-btn {
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+}
+
+.header__sign-up-btn {
+    background-color: var(--very-light-red-cta);
+    color: var(--white);
+    border: none;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+}
+
+.header__info h1 {
+    font-size: 3rem;
+}
+
+.header__info-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.header__start-btn {
+    background-color: var(--white);
+    color: var(--very-light-red-cta);
+    border: none;
+}
+
+.header__learn-btn {
+    background-color: var(--light-red-cta);
+    color: var(--white);
+    border: 1px solid var(--white);
 }
