@@ -30,11 +30,12 @@
 body {
     min-height: 100vh;
     font-size: var(--fs-default);
+    overflow-x: hidden;
 }
 
 /* HEADER STYLING */
 
-.header {
+header {
     background: url("./images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, var(--very-light-red), var(--light-red));
     background-position: 25% 50%;
     background-repeat: no-repeat;
@@ -47,12 +48,12 @@ body {
     text-align: center
 }
 
-.header a {
+header a {
     color: var(--white);
     text-decoration: none;
 }
 
-.header a:hover {
+header a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
@@ -155,3 +156,49 @@ body {
 }
 
 /* SECTION ONE STYLING */
+
+.section-one {
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    font-family: "Overpass", sans-serif;
+    padding: 7rem;
+    line-height: 1.5;
+}
+
+.section-one h2 {
+    text-align: center;
+    grid-column: 1 / 3;
+}
+
+.section-one h2,
+.section-one h3 {
+    color: var(--very-dark-blue);
+}
+
+.section-one h2 {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+}
+
+.section-one article h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.section-one__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-one__article-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 55%;
+}
+
+.section-one img {
+    position: absolute;
+    top: -400px;
+    left: -200px;
+}
