@@ -32,10 +32,6 @@ body {
     font-size: var(--fs-default);
 }
 
-ul {
-    list-style-type: none;
-}
-
 /* HEADER STYLING */
 
 .header {
@@ -69,14 +65,18 @@ ul {
 
 .header__nav-menus {
     display: flex;
-    margin-left: 4rem;
-    margin-right: auto;
-    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    min-width: 20rem;
+    width: 40%;
 }
 
-.header__nav-menus li::after {
-    content: url("./images/icon-arrow-light.svg");
-    margin-left: 0.5rem;
+.header__link-product,
+.header__link-company,
+.header__link-connect {
+    margin-left: 0.3rem;
+    white-space: nowrap;
 }
 
 .header__dropdown {
