@@ -96,12 +96,19 @@ body {
     padding: 0.6rem 1.5rem;
     font-family: "Overpass", sans-serif;
     font-weight: 600;
+    transition: 0.5s;
 }
 
 .header__sign-up-btn {
+    background-color: var(--white);
+    color: var(--very-light-red-cta);
+    border: none;
+}
+
+.header__sign-up-btn:hover {
+    cursor: pointer;
     background-color: var(--very-light-red-cta);
     color: var(--white);
-    border: none;
 }
 
 .header__info {
@@ -128,8 +135,23 @@ body {
     border: none;
 }
 
+.header__start-btn:hover {
+    cursor: pointer;
+    background-color: var(--very-light-red-cta);
+    color: var(--white);
+}
+
 .header__learn-btn {
     background-color: var(--light-red-cta);
     color: var(--white);
     border: 1px solid var(--white);
 }
+
+.header__learn-btn:hover {
+    cursor: pointer;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--very-light-red-cta);
+}
+
+/* SECTION ONE STYLING */
