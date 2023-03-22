@@ -207,22 +207,31 @@ header a:hover {
 .article-two {
     background: url("./images/bg-pattern-circles.svg"), linear-gradient(to right, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
     background-repeat: no-repeat;
+    background-position: -30% 85%;
+    background-size: auto;
     color: var(--white);
     font-family: "Overpass", sans-serif;
 
-    padding: 5rem 8rem;
+    padding: 6rem 8rem;
     line-height: 2rem;
     border-top-right-radius: 5rem;
     border-bottom-left-radius: 5rem;
 }
 
-.article-two__flex-grid {
+.article-two__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-two__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .article-two img {
     position: absolute;
+    left: 100px;
 }
 
 .article-two h2 {
