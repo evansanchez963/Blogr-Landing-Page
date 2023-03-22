@@ -48,12 +48,12 @@ header {
     text-align: center
 }
 
-header a {
+.header a {
     color: var(--white);
     text-decoration: none;
 }
 
-header a:hover {
+.header a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
@@ -162,7 +162,8 @@ header a:hover {
     color: var(--very-dark-grayish-blue);
     font-family: "Overpass", sans-serif;
 
-    padding: 7rem;
+    padding: 8rem;
+    margin-top: 4rem;
     margin-bottom: 10rem;
     line-height: 2rem;
 }
@@ -186,6 +187,7 @@ header a:hover {
 .article-one__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .article-one__article-text {
@@ -198,8 +200,6 @@ header a:hover {
 .article-one img {
     position: absolute;
     right: -250px;
-    top: 500px;
-    width: 800px;
 }
 
 /* ARTICLE TWO STYLING */
@@ -221,7 +221,6 @@ header a:hover {
 .article-two__container {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .article-two__grid {
@@ -231,10 +230,50 @@ header a:hover {
 
 .article-two img {
     position: absolute;
-    left: 100px;
+    left: 50px;
 }
 
 .article-two h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
 }
+
+/* ARTICLE THREE STYLING */
+
+.article-three {
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    font-family: "Overpass", sans-serif;
+
+    padding: 8rem;
+    line-height: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.article-three h3 {
+    color: var(--very-dark-blue);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.article-three__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-three img {
+    position: absolute;
+    left: -280px;
+}
+
+.article-three__article-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 50%;
+}
+
+/* FOOTER STYLING */
+
