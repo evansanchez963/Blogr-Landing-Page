@@ -155,6 +155,31 @@ header {
     color: var(--very-light-red-cta);
 }
 
+.header__hamburger-button {
+    display: none;
+}
+
+@media screen and (max-width: 845px) {
+    .header {
+        padding: 4rem 2rem;
+    }
+
+    .header__link-product,
+    .header__link-company,
+    .header__link-connect {
+        display: none;
+    }
+
+    .header__nav-buttons {
+        display: none;
+    }
+
+    .header__hamburger-button {
+        display: block;
+        cursor: pointer;
+    }
+}
+
 /* ARTICLE ONE STYLING */
 
 .article-one {
