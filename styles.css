@@ -68,8 +68,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    min-width: 20rem;
     width: 40%;
 }
 
@@ -230,6 +228,7 @@ header {
 @media screen and (max-width: 1250px) {
     .article-one {
         margin: 0;
+        margin-bottom: 15rem;
         padding: 4rem 2rem; 
     }
 
@@ -279,19 +278,45 @@ header {
     align-items: center;
 }
 
-.article-two__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .article-two img {
     position: absolute;
     left: 50px;
 }
 
+.article-two section {
+    margin-left: auto;
+    width: 50%;
+}
+
 .article-two h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
+}
+
+@media screen and (max-width: 1250px) {
+    .article-two {
+        position: relative;
+        padding: 8rem 2rem;
+        background-position: 50% 100%;
+    }
+
+    .article-two__container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    .article-two img {    
+        position: absolute;
+        left: initial;
+        top: -250px;
+    }
+
+    .article-two section {
+        margin: 0;
+        width: auto;
+    }
 }
 
 /* ARTICLE THREE STYLING */
