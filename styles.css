@@ -283,6 +283,15 @@ header {
         display: block;
         cursor: pointer;
     }
+
+    .header__hamburger-button.hide {
+        display: none;
+    }
+
+    .header__close-button.show {
+        display: block;
+        cursor: pointer;
+    }
 }
 
 /* ARTICLE ONE STYLING */

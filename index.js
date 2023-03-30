@@ -10,8 +10,15 @@ const headerConnectLink = document.getElementsByClassName(
 const headerDropdownMenus = document.getElementsByClassName("header__dropdown");
 const headerDropdownArrows =
   document.getElementsByClassName("header__tab-arrow");
-
-console.log(headerDropdownArrows);
+const headerMobileHamburgerButton = document.getElementsByClassName(
+  "header__hamburger-button"
+)[0];
+const headerMobileCloseButton = document.getElementsByClassName(
+  "header__close-button"
+)[0];
+const headerMobileMenu = document.getElementsByClassName(
+  "header__mobile-menu"
+)[0];
 
 const hideAllDropdownMenus = () => {
   for (let i = 0; i < headerDropdownMenus.length; i++) {
@@ -46,8 +53,27 @@ const toggleHeaderDropdownMenu = (idx) => {
   }
 };
 
+const toggleHeaderMobileMenu = () => {
+  const hasShowClass = headerMobileMenu.classList.contains("show");
+
+  if (hasShowClass) {
+    headerMobileHamburgerButton.classList.remove("hide");
+    headerMobileCloseButton.classList.remove("show");
+    headerMobileMenu.classList.remove("show");
+  } else {
+    headerMobileHamburgerButton.classList.add("hide");
+    headerMobileCloseButton.classList.add("show");
+    headerMobileMenu.classList.add("show");
+  }
+};
+
 window.addEventListener("resize", () => {
   hideAllDropdownMenus();
+
+  const mobileMenuHasShowClass = headerMobileMenu.classList.contains("show");
+  if (mobileMenuHasShowClass) {
+    toggleHeaderMobileMenu();
+  }
 });
 
 headerProductLink.addEventListener("click", () => {
@@ -64,3 +90,7 @@ headerConnectLink.addEventListener("click", () => {
   hideOtherDropdownMenus(2);
   toggleHeaderDropdownMenu(2);
 });
+
+headerMobileHamburgerButton.addEventListener("click", toggleHeaderMobileMenu);
+
+headerMobileCloseButton.addEventListener("click", toggleHeaderMobileMenu);
