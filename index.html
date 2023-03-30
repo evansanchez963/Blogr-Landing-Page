@@ -18,7 +18,10 @@
       <div class="header__nav-menus">
         <img src="./images/logo.svg" alt="Blogr Logo">
         <div class="header__tab-product">
-          <p>Product <img class="header__tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Product Links"></p>
+          <div class="header__tab">
+            <p>Product</p>
+            <img class="header__tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Product Links">
+          </div>
           <div class="header__dropdown">
             <a href="#">Overview</a>
             <a href="#">Pricing</a>
@@ -29,7 +32,10 @@
         </div>
 
         <div class="header__tab-company">
-          <p>Company <img class="header__tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Company Links"></p>
+          <div class="header__tab">
+            <p>Company</p>
+            <img class="header__tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Company Links">
+          </div>
           <div class="header__dropdown">
             <a href="#">About</a>
             <a href="#">Team</a>
@@ -39,7 +45,10 @@
         </div>
 
         <div class="header__tab-connect">
-          <p>Connect <img class="header__tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Connect Links"></p>
+          <div class="header__tab">
+            <p>Connect</p>
+            <img class="header__tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Connect Links">
+          </div>
           <div class="header__dropdown">
             <a href="#">Contact</a>
             <a href="#">Newsletter</a>
@@ -50,18 +59,39 @@
       
       <div class="header__nav-buttons">
         <a href="#">Login</a>
-        <button class="header__sign-up-btn">Sign Up</button>
+        <button class="header__sign-up-button">Sign Up</button>
       </div>
 
       <img class="header__hamburger-button" src="./images/icon-hamburger.svg" alt="Navbar Hamburger Menu Button">
+      <img class="header__close-button" src="./images/icon-close.svg" alt="Navbar Close Menu Button">
     </nav>
+
+    <div class="header__mobile-menu show">
+      <div class="header__mobile-tab">
+        <p>Product</p>
+        <img class="header__mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Mobile Product Links">
+      </div>
+      <div class="header__mobile-tab">
+        <p>Company</p>
+        <img class="header__mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Mobile Company Links">
+      </div>
+      <div class="header__mobile-tab">
+        <p>Connect</p>
+        <img class="header__mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Mobile Connect Links">
+      </div>
+      <hr>
+      <div class="header__nav-mobile-buttons">
+        <a href="#">Login</a>
+        <button >Sign Up</button>
+      </div>
+    </div>
 
     <div class="header__info">
       <h1>A modern publishing platform</h1>
       <p>Grow your audience and build your online brand</p>
       <div class="header__info-buttons">
-        <button class="header__start-btn">Start for Free</button>
-        <button class="header__learn-btn">Learn More</button>
+        <button class="header__start-button">Start for Free</button>
+        <button class="header__learn-button">Learn More</button>
       </div>
     </div>
   </header>
