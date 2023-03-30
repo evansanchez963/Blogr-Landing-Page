@@ -1,15 +1,15 @@
 const headerProductLink = document.getElementsByClassName(
-  "header__link-product"
-);
+  "header__tab-product"
+)[0];
 const headerCompanyLink = document.getElementsByClassName(
-  "header__link-company"
-);
+  "header__tab-company"
+)[0];
 const headerConnectLink = document.getElementsByClassName(
-  "header__link-connect"
-);
+  "header__tab-connect"
+)[0];
 const headerDropdownMenus = document.getElementsByClassName("header__dropdown");
 const headerDropdownArrows =
-  document.getElementsByClassName("header__link-arrow");
+  document.getElementsByClassName("header__tab-arrow");
 
 console.log(headerDropdownArrows);
 
@@ -50,17 +50,17 @@ window.addEventListener("resize", () => {
   hideAllDropdownMenus();
 });
 
-headerProductLink[0].addEventListener("click", () => {
+headerProductLink.addEventListener("click", () => {
   hideOtherDropdownMenus(0);
   toggleHeaderDropdownMenu(0);
 });
 
-headerCompanyLink[0].addEventListener("click", () => {
+headerCompanyLink.addEventListener("click", () => {
   hideOtherDropdownMenus(1);
   toggleHeaderDropdownMenu(1);
 });
 
-headerConnectLink[0].addEventListener("click", () => {
+headerConnectLink.addEventListener("click", () => {
   hideOtherDropdownMenus(2);
   toggleHeaderDropdownMenu(2);
 });

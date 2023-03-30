@@ -48,15 +48,20 @@ header {
     text-align: center
 }
 
+.header p,
 .header a {
     color: var(--white);
     text-decoration: none;
 }
 
+.header p:hover,
 .header a:hover {
+    cursor: pointer;
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
+
+
 
 .header__navbar {
     display: flex;
