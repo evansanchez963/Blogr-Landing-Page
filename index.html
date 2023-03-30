@@ -7,13 +7,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
 
-  <script src="index.js" defer></script>
+  <script src="./index.js" type="module" defer></script>
   
   <title>Frontend Mentor | [Blogr]</title>
 
 </head>
 <main>
-  <header class="header">
+  <header>
     <nav class="header__navbar">
       <div class="header__nav-menus">
         <img src="./images/logo.svg" alt="Blogr Logo">
@@ -71,13 +71,31 @@
         <p>Product</p>
         <img class="header__mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Mobile Product Links">
       </div>
+      <div class="header__mobile-submenu">
+        <a href="#">Overview</a>
+        <a href="#">Pricing</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Features</a>
+        <a href="#">Integrations</a>
+      </div>
       <div class="header__mobile-tab">
         <p>Company</p>
         <img class="header__mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Mobile Company Links">
       </div>
+      <div class="header__mobile-submenu">
+        <a href="#">About</a>
+        <a href="#">Team</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
       <div class="header__mobile-tab">
         <p>Connect</p>
         <img class="header__mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Mobile Connect Links">
+      </div>
+      <div class="header__mobile-submenu">
+        <a href="#">Contact</a>
+        <a href="#">Newsletter</a>
+        <a href="#">LinkedIn</a>
       </div>
       <hr>
       <div class="header__nav-mobile-buttons">
@@ -96,7 +114,7 @@
     </div>
   </header>
 
-  <article class="article-one">
+  <article id="article-one">
     <h2>Designed for the future</h2>
     <div class="article-one__container">
       <picture class="article-one__image">
@@ -124,7 +142,7 @@
     </div>
   </article>
   
-  <article class="article-two">
+  <article id="article-two">
     <div class="article-two__container">
       <img src="./images/illustration-phones.svg" alt="Two Phones with Blogr Application Illustration">
       <section>
@@ -138,7 +156,7 @@
     </div>
   </article>
 
-  <article class="article-three">
+  <article id="article-three">
     <div class="article-three__container">
       <picture class="article-three__image">
         <source srcset="./images/illustration-laptop-desktop.svg" media="(min-width: 1250px)">
@@ -164,7 +182,7 @@
     </div>
   </article>
 
-  <footer class="footer">
+  <footer>
     <nav class="footer__navbar">
       <img src="./images/logo.svg" alt="Blogr Logo">
 
