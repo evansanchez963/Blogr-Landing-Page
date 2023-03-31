@@ -33,9 +33,9 @@ const hideOtherDropdownMenus = (idxToIgnore) => {
 const toggleHeaderDropdownMenu = (idx) => {
   const dropdownMenu = headerDropdownMenus[idx];
   const dropdownArrow = headerDropdownArrows[idx];
-  const hasShowClass = dropdownMenu.classList.contains("show");
+  const isDropdownMenuOpen = dropdownMenu.classList.contains("show");
 
-  if (hasShowClass) {
+  if (isDropdownMenuOpen) {
     dropdownMenu.classList.remove("show");
     dropdownArrow.classList.remove("show");
   } else {

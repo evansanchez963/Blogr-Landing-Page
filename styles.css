@@ -228,9 +228,26 @@ header a:hover {
     gap: 0.3rem;
 }
 
-.header__mobile-menu p {
+.header__mobile-tab-text {
     color: var(--very-dark-blue);
     font-weight: bold;
+}
+
+.header__mobile-tab-text.show {
+    opacity: 0.7;
+}
+
+.header__mobile-arrow {
+    width: 10px;
+    height: 7px;
+
+    transform: rotate(0deg);
+    transition: transform 250ms ease;
+}
+
+.header__mobile-arrow.show {
+    transform: rotate(180deg);
+    transition: transform 250ms ease;
 }
 
 .header__mobile-submenu {
