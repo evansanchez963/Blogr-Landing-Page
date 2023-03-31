@@ -32,7 +32,7 @@ const hideAllMobileSubMenus = () => {
 
 const hideOtherMobileSubMenus = (idxToIgnore) => {
   for (let i = 0; i < headerMobileTabs.length; i++) {
-    if (i === idxToIgore) continue;
+    if (i === idxToIgnore) continue;
     let headerMobileTabText = headerMobileTabTexts[i];
     let headerMobileArrow = headerMobileArrows[i];
     let headerMobileSubMenu = headerMobileSubMenus[i];
@@ -40,6 +40,23 @@ const hideOtherMobileSubMenus = (idxToIgnore) => {
     headerMobileTabText.classList.remove("show");
     headerMobileArrow.classList.remove("show");
     headerMobileSubMenu.classList.remove("show");
+  }
+};
+
+const toggleHeaderMobileSubMenu = (idx) => {
+  let headerMobileTabText = headerMobileTabTexts[idx];
+  let headerMobileArrow = headerMobileArrows[idx];
+  let headerMobileSubMenu = headerMobileSubMenus[idx];
+  const isSubMenuOpen = headerMobileTabText.classList.contains("show");
+
+  if (isSubMenuOpen) {
+    headerMobileTabText.classList.remove("show");
+    headerMobileArrow.classList.remove("show");
+    headerMobileSubMenu.classList.remove("show");
+  } else {
+    headerMobileTabText.classList.add("show");
+    headerMobileArrow.classList.add("show");
+    headerMobileSubMenu.classList.add("show");
   }
 };
 
@@ -65,6 +82,14 @@ const addHeaderMobileMenuEvents = () => {
       toggleHeaderMobileMenu();
     }
   });
+
+  for (let i = 0; i < headerMobileTabs.length; i++) {
+    let headerMobileTab = headerMobileTabs[i];
+    headerMobileTab.addEventListener("click", () => {
+      hideOtherMobileSubMenus(i);
+      toggleHeaderMobileSubMenu(i);
+    });
+  }
 
   headerMobileHamburgerButton.addEventListener("click", toggleHeaderMobileMenu);
 
