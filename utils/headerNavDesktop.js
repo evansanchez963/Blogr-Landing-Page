@@ -1,12 +1,4 @@
-const headerProductLink = document.getElementsByClassName(
-  "header__tab-product"
-)[0];
-const headerCompanyLink = document.getElementsByClassName(
-  "header__tab-company"
-)[0];
-const headerConnectLink = document.getElementsByClassName(
-  "header__tab-connect"
-)[0];
+const headerTabs = document.getElementsByClassName("header__tab");
 const headerDropdownMenus = document.getElementsByClassName("header__dropdown");
 const headerDropdownArrows =
   document.getElementsByClassName("header__tab-arrow");
@@ -49,20 +41,14 @@ const addHeaderNavDesktopEvents = () => {
     hideAllDropdownMenus();
   });
 
-  headerProductLink.addEventListener("click", () => {
-    hideOtherDropdownMenus(0);
-    toggleHeaderDropdownMenu(0);
-  });
+  for (let i = 0; i < headerTabs.length; i++) {
+    let headerTab = headerTabs[i];
 
-  headerCompanyLink.addEventListener("click", () => {
-    hideOtherDropdownMenus(1);
-    toggleHeaderDropdownMenu(1);
-  });
-
-  headerConnectLink.addEventListener("click", () => {
-    hideOtherDropdownMenus(2);
-    toggleHeaderDropdownMenu(2);
-  });
+    headerTab.addEventListener("click", () => {
+      hideOtherDropdownMenus(i);
+      toggleHeaderDropdownMenu(i);
+    });
+  }
 };
 
 export default addHeaderNavDesktopEvents;
